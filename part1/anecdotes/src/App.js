@@ -12,12 +12,25 @@ function App() {
   ];
 
   const [selected, setSelected] = useState(0);
+  const [votes, setVotes] = useState(new Array(anecdotes.length).fill(0));
+
   const getRandomInt = (max) => Math.floor(Math.random() * max);
   const randomizeAnecdote = () => setSelected(getRandomInt(anecdotes.length));
+  const voteAnecdote = () => {
+    const votesCopy = [...votes];
+    votesCopy[selected] += 1;
+    setVotes(votesCopy);
+  };
   return (
     <div className="container">
       <div>{anecdotes[selected]}</div>
-      <button onClick={randomizeAnecdote}>next anecdote</button>
+      <div className="votes">
+        <p>has {votes[selected]} votes</p>
+      </div>
+      <div className="buttons">
+        <button onClick={voteAnecdote}>vote</button>
+        <button onClick={randomizeAnecdote}>next anecdote</button>
+      </div>
     </div>
   );
 }
