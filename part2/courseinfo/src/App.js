@@ -20,10 +20,9 @@ function Content({course}) {
   );
 }
 
-function Total({course}) {
-  let total =
-    course.parts[0].exercises + course.parts[1].exercises + course.parts[2].exercises;
-  return <p>Number of exercises {total}</p>;
+function Total({parts}) {
+  const total = parts.reduce((newTotal, part) => newTotal + part.exercises, 0);
+  return <strong>Number of exercises: {total}</strong>;
 }
 
 function Course({course}) {
@@ -31,6 +30,7 @@ function Course({course}) {
     <div>
       <Header name={course.name} />
       <Content course={course} />
+      <Total parts={course.parts} />
     </div>
   );
 }
