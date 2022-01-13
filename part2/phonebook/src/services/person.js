@@ -21,9 +21,11 @@ function deletePerson(id) {
   return request.then((response) => console.log(response));
 }
 
-export default {
+const exportedObject = {
   getAllPersons,
   createPerson,
   updatePerson,
   deletePerson,
 };
+
+export default exportedObject;
