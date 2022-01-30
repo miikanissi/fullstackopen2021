@@ -46,12 +46,18 @@ function App() {
         `${name} is already added to phonebook. Would you like to replace the old number with the new one?`
       );
       if (result) {
-        personService.updatePerson(_id, personObject).then((returnedPerson) => {
-          const newPersons = persons.map((person) =>
-            person.id !== returnedPerson.id ? person : returnedPerson
-          );
-          setPersons(newPersons);
-        });
+        personService
+          .updatePerson(_id, personObject)
+          .then((returnedPerson) => {
+            const newPersons = persons.map((person) =>
+              person.id !== returnedPerson.id ? person : returnedPerson
+            );
+            setPersons(newPersons);
+          })
+          .catch((error) => {
+            setMessage(error);
+            return;
+          });
         setMessage({text: `Edited ${personObject.name}`, type: "success"});
         setTimeout(() => {
           setMessage(null);
@@ -62,7 +68,11 @@ function App() {
     } else {
       personService
         .createPerson(personObject)
-        .then((returnedPerson) => setPersons(persons.concat(returnedPerson)));
+        .then((returnedPerson) => setPersons(persons.concat(returnedPerson)))
+        .catch((error) => {
+          setMessage(error);
+          return;
+        });
       setMessage({text: `Added ${personObject.name}`, type: "success"});
       setTimeout(() => {
         setMessage(null);
