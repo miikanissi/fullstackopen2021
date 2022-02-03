@@ -1,0 +1,13 @@
+root: true
+env:
+  es2021: true
+  node: true
+  browser: true
+parserOptions:
+  ecmaVersion: 2017
+  sourceTypr: module
+  ecmaFeatures:
+    jsx: true
+extends:
+  - eslint:recommended
+  - prettier
