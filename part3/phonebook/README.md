@@ -1,4 +1,3 @@
-# Full Stack Open 2021 Part 3
+# Phonebook
 
-This repository contains my assignment submission for Helsinki University Full Stack Open 2021 Part 3 ([https://fullstackopen.com/en/](https://fullstackopen.com/en/)).
-Other parts are in the following repository: ([https://github.com/miikanissi/fullstackopen2021/](https://github.com/miikanissi/fullstackopen2021/)).
+This application is a fullstack phonebook app deployed on heroku with a backend written in Node.js and a frontend in React. The data is saved in a MongoDB.
