@@ -4,7 +4,7 @@ This repository contains my assignment submissions for Helsinki University Full 
 
 The course is an introductory course on Modern JavaScript-based Web Development. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js.
 
-The course also contains a section on GraphQL, a modern alternative to REST APIs.
+The course also contains a section on GraphQL, a modern alternative to REST APIs and TypeScript, an open-source typed superset of JavaScript that compiles to plain JavaScript.
 
 ## Parts
 
@@ -23,6 +23,8 @@ The course also contains a section on GraphQL, a modern alternative to REST APIs
 #### [Part 6 - State management with Redux](./part6)
 
 #### [Part 7 - React router, custom hooks, styling app with CSS and webpack](./part7)
+
+#### [Part 8 - GraphQL](./part8)
 
 ## Working with Heroku inside a git repository
 
