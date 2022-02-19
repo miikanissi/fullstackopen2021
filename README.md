@@ -41,7 +41,8 @@ Then from the top level of the working tree:
 
 This command will only push the defined subtree to heroku while allowing us the freedom to seperate the repository in multiple project folders.
 
-## Course Certificate
+## Course Certificates
 
 
-<p align="center"><img height="60%" width="100%" src="./certificate-fullstack.png" alt="Course Certificate"></p>
+<p align="center"><img height="60%" width="100%" src="./certificate-fullstack.png" alt="FullStack Certificate"></p>
+<p align="center"><img height="60%" width="100%" src="./certificate-graphql.png" alt="GraphQL Certificate"></p>
