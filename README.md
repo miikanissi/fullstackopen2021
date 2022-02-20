@@ -26,6 +26,8 @@ The course also contains a section on GraphQL, a modern alternative to REST APIs
 
 #### [Part 8 - GraphQL](./part8)
 
+#### [Part 9 - TypeScript](./part9)
+
 ## Working with Heroku inside a git repository
 
 Heroku uses git repositories to manage deployment but since we have multiple seperate projects in this repository utilizing Heroku we need to do some tricks to make it work.
