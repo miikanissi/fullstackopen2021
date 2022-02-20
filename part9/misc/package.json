@@ -7,11 +7,13 @@
     "ts-node": "ts-node",
     "test": "echo \"Error: no test specified\" && exit 1",
     "calculateBmi": "ts-node bmiCalculator.ts",
-    "calculateExercises": "ts-node exerciseCalculator.ts"
+    "calculateExercises": "ts-node exerciseCalculator.ts",
+    "start": "ts-node index.ts"
   },
   "author": "Miika Nissi",
   "license": "GPL-3.0-or-later",
   "devDependencies": {
+    "@types/express": "^4.17.13",
     "@types/node": "^17.0.18",
     "ts-node": "^10.5.0",
     "tslib": "^2.3.1",
