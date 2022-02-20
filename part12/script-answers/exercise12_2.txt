@@ -1,0 +1,18 @@
+Script started on 2022-02-20 16:46:21-05:00 [TERM="st-256color" TTY="/dev/pts/0" COLUMNS="94" LINES="30"]
+[?2004h[0;34m[[0mm[0;34m@[0mdeb[0;34m: [0;1;31m~[0;34m][0m$ [0m[7mdocker run -it ubuntu bash[27m[C[C[C[C[C[C[C[C[C[C[C[Cdocker run -it ubuntu bash
+[?2004ldocker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create": dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+[?2004h[0;34m[[0mm[0;34m@[0mdeb[0;34m: [0;1;31m~[0;34m][0m$ [0mdocker run -it ubuntu bash[1@s[1@u[C[1@d[1@o[1@ 
+[?2004lUnable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K08c01a0ec47e: Pulling fs layer [1B[1A[2K08c01a0ec47e: Downloading  294.9kB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  883.1kB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  1.473MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  2.059MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  2.935MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading   3.82MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  4.696MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  5.876MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  7.056MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  8.239MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  9.423MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading   10.6MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  11.48MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  12.95MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  14.72MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  16.18MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  17.66MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  19.12MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading   20.3MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  21.48MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  22.66MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  23.83MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  25.01MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  26.19MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  27.37MB/28.56MB[1B[1A[2K08c01a0ec47e: Downloading  28.55MB/28.56MB[1B[1A[2K08c01a0ec47e: Verifying Checksum [1B[1A[2K08c01a0ec47e: Download complete [1B[1A[2K08c01a0ec47e: Extracting  294.9kB/28.56MB[1B[1A[2K08c01a0ec47e: Extracting  3.539MB/28.56MB[1B[1A[2K08c01a0ec47e: Extracting  5.014MB/28.56MB[1B[1A[2K08c01a0ec47e: Extracting  9.732MB/28.56MB[1B[1A[2K08c01a0ec47e: Extracting  15.34MB/28.56MB[1B[1A[2K08c01a0ec47e: Extracting  21.53MB/28.56MB[1B[1A[2K08c01a0ec47e: Extracting  24.48MB/28.56MB[1B[1A[2K08c01a0ec47e: Extracting  27.72MB/28.56MB[1B[1A[2K08c01a0ec47e: Extracting  28.56MB/28.56MB[1B[1A[2K08c01a0ec47e: Pull complete [1BDigest: sha256:669e010b58baf5beb2836b253c1fd5768333f0d1dbcb834f7c07a4dc93f474be
+Status: Downloaded newer image for ubuntu:latest
+]0;root@58746ae787ce: /root@58746ae787ce:/# [K]0;root@58746ae787ce: /root@58746ae787ce:/# mkdir /usr/src/app
+]0;root@58746ae787ce: /root@58746ae787ce:/# touch /usr/src/app/index.js
+]0;root@58746ae787ce: /root@58746ae787ce:/# [Kexit
+exit
+[?2004h[0;34m[[0mm[0;34m@[0mdeb[0;34m: [0;1;31m~[0;34m][0m$ [0mexit
+[?2004lexit
+
+Script done on 2022-02-20 16:47:18-05:00 [COMMAND_EXIT_CODE="0"]
