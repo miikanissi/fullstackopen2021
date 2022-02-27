@@ -21,3 +21,11 @@ services:
     command: ['redis-server', '--appendonly', 'yes']
     volumes:
       - ./redis_data:/data
+  todo-backend:
+    image: todo-backend
+    build: .
+    ports:
+      - 3001:3000
+    environment:
+      - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
+      - REDIS_URL=//redis:6379
