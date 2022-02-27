@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+  todo-frontend-dev:
+    image: todo-frontend-dev
+    build:
+      context: . # The context will pick this directory as the "build context"
+      dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    ports:
+      - 3001:3000
+    environment:
+      - REACT_APP_BACKEND_URL=http://192.168.1.9:3000/
+
+    container_name: todo-frontend-dev # This will name the container todo-frontend-dev

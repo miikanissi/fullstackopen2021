@@ -18,7 +18,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "test:ci": "CI=true npm test"
+    "test:ci": "CI=true npm test",
+    "docker:dev:build": "docker build -f ./dev.Dockerfile -t todo-frontend-dev .",
+    "docker:dev:run": "docker-compose -f docker-compose.dev.yml up"
   },
   "eslintConfig": {
     "extends": [
