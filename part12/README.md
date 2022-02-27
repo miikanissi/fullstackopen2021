@@ -4,6 +4,8 @@ In this part, we will learn how to package code into standard units of software 
 
 We will utilize containers to create immutable execution environments for our Node.js and React projects. Containers also make it easy to include multiple services with our projects. With the flexibility, we will explore and experiment with many different and popular tools by utilizing containers.
 
+#### [Blog List containerized](./bloglist)
+
 #### [Docker Practice](./docker-practice)
 
 #### [Script Answers](./script-answers)

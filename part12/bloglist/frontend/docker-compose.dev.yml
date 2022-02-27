@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  blog-frontend-dev:
+    image: blog-frontend-dev
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3000:3000
+    environment:
+      - REACT_APP_BACKEND_URL=http://localhost:3001
+    container_name: blog-frontend-dev
