@@ -13,7 +13,7 @@ router.get("/", async (_, res) => {
 router.post("/", async (req, res) => {
   const todo = await Todo.create({
     text: req.body.text,
-    done: false,
+    done: req.body.done,
   });
   redis.setAsync("added_todos", Number(await redis.getAsync("added_todos")) + 1);
   res.send(todo);

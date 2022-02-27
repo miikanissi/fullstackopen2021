@@ -1,9 +1,16 @@
 # The first FROM is now a stage called build-stage
-FROM node:16 AS build-stage
+FROM node:16 AS base
 
 WORKDIR /usr/src/app
 
 COPY . .
+
+FROM base as test
+
+ENV CI=true
+CMD [ "npm", "run", "test" ]
+
+FROM base as build-stage
 
 RUN npm ci
 
