@@ -45,7 +45,7 @@ This command will only push the defined subtree to heroku while allowing us the 
 
 ## Course Certificates
 
-
-<p align="center"><img height="60%" width="100%" src="./certificate-fullstack.png" alt="FullStack Certificate"></p>
-<p align="center"><img height="60%" width="100%" src="./certificate-graphql.png" alt="GraphQL Certificate"></p>
-<p align="center"><img height="60%" width="100%" src="./certificate-typescript.png" alt="TypeScript Certificate"></p>
+<p align="center"><img height="60%" width="100%" src="./certificates/certificate-fullstack.png" alt="FullStack Certificate"></p>
+<p align="center"><img height="60%" width="100%" src="./certificates/certificate-graphql.png" alt="GraphQL Certificate"></p>
+<p align="center"><img height="60%" width="100%" src="./certificates/certificate-typescript.png" alt="TypeScript Certificate"></p>
+<p align="center"><img height="60%" width="100%" src="./certificates/certificate-containers.png" alt="Docker Containers Certificate"></p>

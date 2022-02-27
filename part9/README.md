@@ -11,3 +11,7 @@ In this part, we will be using the tools previously introduced to build end-to-e
 #### [Patientor Backend](./patientor-backend)
 
 #### [Patientor Frontend (forked)](./patientor-frontend)
+
+## Course Certificate for this part
+
+<p align="center"><img height="60%" width="100%" src="../certificates/certificate-typescript.png" alt="TypeScript Certificate"></p>

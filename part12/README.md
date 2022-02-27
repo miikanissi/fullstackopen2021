@@ -11,3 +11,7 @@ We will utilize containers to create immutable execution environments for our No
 #### [Script Answers](./script-answers)
 
 #### [TODO App](./todo-app)
+
+## Course Certificate for this part
+
+<p align="center"><img height="60%" width="100%" src="../certificates/certificate-containers.png" alt="Docker Containers Certificate"></p>
