@@ -1,8 +1,30 @@
 version: '3.8'            # Version 3.8 is quite new and should work
 
 services:
-  app:                    # The name of the service, can be anything
-    image: express-server # Declares which image to use
-    build: .              # Declares where to build if image is not found
-    ports:                # Declares the ports to publish
-      - 3000:3000
+  mongo:
+    image: mongo
+    ports:
+     - 3456:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: the_database
+    volumes:
+      - ./mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      - ./mongo_data:/data/db
+  redis:
+    image: redis
+    command: ['redis-server', '--appendonly', 'yes']
+    ports:
+     - 3457:6379
+    volumes:
+      - ./redis_data:/data
+  todo-backend:
+    image: todo-backend
+    build: .
+    ports:
+      - 3001:3000
+    environment:
+      - MONGO_URL=mongodb://the_username:the_password@mongo:27017/the_database
+      - REDIS_URL=//redis:6379
+    container_name: todo-backend

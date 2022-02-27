@@ -23,7 +23,9 @@ services:
       - ./redis_data:/data
   todo-backend-dev:
     image: todo-backend-dev
-    build: .
+    build:
+      context: .
+      dockerfile: dev.Dockerfile
     ports:
       - 3001:3000
     environment:

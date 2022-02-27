@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  todo-frontend:
+    image: todo-frontend
+    build: .
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - 3000:80
+    environment:
+      - REACT_APP_BACKEND_URL=http://192.168.1.9:3001/
+
+    container_name: todo-frontend
