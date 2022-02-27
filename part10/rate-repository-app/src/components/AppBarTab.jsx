@@ -1,4 +1,4 @@
-import { View , StyleSheet} from "react-native";
+import { StyleSheet} from "react-native";
 import Text from "./Text";
 import theme from "../theme";
 
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
 });
 
 const AppBarTab = ({ text })=>{
-  return <View><Text style={styles.item}>{text}</Text></View>;
+  return <Text style={styles.item}>{text}</Text>;
 };
 
 export default AppBarTab;
