@@ -8,32 +8,53 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "eject": "expo eject",
-    "lint": "eslint -c ./.eslintrc ./src/**/*.{js,jsx} App.js --no-error-on-unmatched-pattern"
+    "lint": "eslint ./src/**/*.{js,jsx} App.js --no-error-on-unmatched-pattern",
+    "test": "jest"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|@sentry/.*|react-router-native)"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ]
   },
   "dependencies": {
     "@apollo/client": "^3.5.9",
-    "@expo/metro-config": "^0.3.11",
-    "@react-native-async-storage/async-storage": "^1.16.1",
-    "dotenv": "^16.0.0",
-    "expo": "~44.0.0",
-    "expo-status-bar": "~1.2.0",
+    "@react-native-async-storage/async-storage": "~1.15.0",
+    "@react-native-picker/picker": "1.16.1",
+    "dotenv": "^10.0.0",
+    "expo": "~42.0.1",
+    "expo-status-bar": "~1.0.4",
+    "expo-web-browser": "~9.2.0",
     "formik": "^2.2.9",
-    "graphql": "^16.3.0",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-native": "0.64.3",
-    "react-native-web": "0.17.1",
-    "react-router-native": "^6.2.1",
+    "graphql": "^15.8.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
+    "react-native-web": "~0.13.12",
+    "react-router-native": "^5.2.1",
+    "use-debounce": "^7.0.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@babel/eslint-parser": "^7.17.0",
-    "@expo/webpack-config": "^0.16.18",
-    "@typescript-eslint/eslint-plugin": "^5.12.1",
-    "eslint": "^8.10.0",
-    "eslint-plugin-react": "^7.29.2",
-    "eslint-plugin-react-native": "^4.0.0"
+    "@babel/core": "^7.9.0",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/preset-react": "^7.16.5",
+    "@expo/webpack-config": "^0.16.15",
+    "@testing-library/jest-native": "^4.0.4",
+    "@testing-library/react-native": "^9.0.0",
+    "eslint": "^8.5.0",
+    "eslint-plugin-jest": "^25.3.3",
+    "eslint-plugin-jsx": "^0.1.0",
+    "eslint-plugin-react": "^7.28.0",
+    "jest": "^27.4.5",
+    "jest-expo": "^44.0.1",
+    "react-test-renderer": "^16.13.1"
   },
   "private": true
 }

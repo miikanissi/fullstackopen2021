@@ -1,6 +1,7 @@
 import {Platform} from "react-native";
 
 const theme = {
+  roundness: 4,
   colors: {
     textPrimary: "#24292e",
     textSecondary: "#586069",

@@ -1,12 +1,14 @@
 {
   "root": true,
-  "plugins": ["react", "react-native"],
+  "plugins": ["react", "react-native", "jest"],
   "settings": {
     "react": {
       "version": "detect"
     }
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:react/jsx-runtime",
+        "plugin:react/recommended",
+        "plugin:jest/recommended",],
   "parser": "@babel/eslint-parser",
   "env": {
     "react-native/react-native": true

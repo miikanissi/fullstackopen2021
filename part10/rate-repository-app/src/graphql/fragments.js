@@ -5,8 +5,8 @@ export const REPOSITORY_DETAILS = gql`
     id
     name
     ownerName
-    createdAt
     fullName
+    createdAt
     description
     language
     forksCount
@@ -14,5 +14,29 @@ export const REPOSITORY_DETAILS = gql`
     ratingAverage
     reviewCount
     ownerAvatarUrl
+  }
+`;
+export const USER_BASE_FIELDS = gql`
+  fragment userBaseFields on User {
+    username
+    id
+    createdAt
+  }
+`;
+
+export const REVIEW_BASE_FIELDS = gql`
+  fragment reviewBaseFields on Review {
+    id
+    text
+    rating
+    repository {
+      fullName
+    }
+    repositoryId
+    createdAt
+    user {
+      id
+      username
+    }
   }
 `;

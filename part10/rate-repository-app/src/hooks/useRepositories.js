@@ -1,38 +1,38 @@
-import {useState} from "react";
 import {useQuery} from "@apollo/client";
+
 import {GET_REPOSITORIES} from "../graphql/queries";
 
-// const useRepositories = () => {
-//   const [repositories, setRepositories] = useState();
-//   const [loading, setLoading] = useState(false);
+const sortCriteriaOptions = {
+  latest_repos: {orderBy: "CREATED_AT", orderDirection: "DESC"},
+  highest_rated_repos: {orderBy: "RATING_AVERAGE", orderDirection: "DESC"},
+  lowest_rated_repos: {orderBy: "RATING_AVERAGE", orderDirection: "ASC"},
+};
 
-//   const fetchRepositories = async () => {
-//     setLoading(true);
-
-//     // Replace the IP address part with your own IP address!
-//     const response = await fetch("http://192.168.1.9:5000/api/repositories");
-//     const json = await response.json();
-
-//     setLoading(false);
-//     setRepositories(json);
-//   };
-
-//   useEffect(() => {
-//     fetchRepositories();
-//   }, []);
-
-//   return {repositories, loading, refetch: fetchRepositories};
-// };
-
-const useRepositories = () => {
-  const [repositories, setRepositories] = useState();
-  const {error, loading} = useQuery(GET_REPOSITORIES, {
+const useRepositories = ({sortCriteria, filter, first}) => {
+  const variables = {...sortCriteriaOptions[sortCriteria], filter, first};
+  const {data, loading, fetchMore, ...result} = useQuery(GET_REPOSITORIES, {
     fetchPolicy: "cache-and-network",
-    onCompleted: (data) => {
-      setRepositories(data.repositories);
-    },
+    variables: variables,
   });
-  return {repositories, error, loading};
+
+  const handleFetchMore = () => {
+    const canFetchMore = !loading && data?.repositories.pageInfo.hasNextPage;
+    if (!canFetchMore) {
+      return;
+    }
+    fetchMore({
+      variables: {
+        after: data.repositories.pageInfo.endCursor,
+        ...variables,
+      },
+    });
+  };
+
+  return {
+    repositories: data ? data.repositories : undefined,
+    fetchMore: handleFetchMore,
+    ...result,
+  };
 };
 
 export default useRepositories;
