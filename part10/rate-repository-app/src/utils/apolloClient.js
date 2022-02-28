@@ -28,7 +28,6 @@ const createApolloClient = (authStorage) => {
   const authLink = setContext(async (_, {headers}) => {
     try {
       const accessToken = await authStorage.getAccessToken();
-
       return {
         headers: {
           ...headers,
@@ -37,7 +36,6 @@ const createApolloClient = (authStorage) => {
       };
     } catch (e) {
       console.log(e);
-
       return {
         headers,
       };

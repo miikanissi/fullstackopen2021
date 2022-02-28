@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-native";
 import useSingleRepository from "../hooks/useSingleRepository";
-
 import RepositoryItem from "./RepositoryItem";
 import Text from "./Text";
 
@@ -19,8 +18,8 @@ const SingleRepository = () => {
     <RepositoryItem
       repository={repository}
       reviews={reviewData}
-      handleFetchMore={handleFetchMore}
       loading={loading}
+      handleFetchMore={handleFetchMore}
       singleView
     />
   );

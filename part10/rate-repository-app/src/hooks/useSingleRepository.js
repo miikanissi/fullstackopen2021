@@ -1,5 +1,4 @@
 import {useQuery} from "@apollo/client";
-
 import {GET_REPOSITORY} from "../graphql/queries";
 
 const useSingleRepository = ({repositoryId, first}) => {
@@ -8,7 +7,6 @@ const useSingleRepository = ({repositoryId, first}) => {
     fetchPolicy: "cache-and-network",
     variables: variables,
   });
-
   const handleFetchMore = () => {
     const canFetchMore = !loading && data?.repository.reviews.pageInfo.hasNextPage;
     if (!canFetchMore) {
@@ -21,7 +19,6 @@ const useSingleRepository = ({repositoryId, first}) => {
       },
     });
   };
-
   return {
     repository: data ? data.repository : undefined,
     handleFetchMore,

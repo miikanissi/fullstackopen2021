@@ -1,4 +1,3 @@
-import React from "react";
 import { Picker } from "@react-native-picker/picker";
 
 const SortingMenu = ({ setSortingCriteria, sorting }) => {

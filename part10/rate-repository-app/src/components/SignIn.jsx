@@ -1,9 +1,7 @@
-import React from "react";
 import { StyleSheet, View } from "react-native";
 import { Formik } from "formik";
-import * as yup from "yup";
 import { useNavigate } from "react-router-native";
-
+import * as yup from "yup";
 import FormikTextInput from "./FormikTextInput";
 import Button from "./Button";
 import useSignIn from "../hooks/useSignIn";
@@ -67,7 +65,6 @@ export const SignInContainer = ({
 const SignIn = () => {
   const [signIn] = useSignIn();
   const navigate = useNavigate();
-
   const onSubmit = async (values) => {
     const { username, password } = values;
     await signIn({ username, password });

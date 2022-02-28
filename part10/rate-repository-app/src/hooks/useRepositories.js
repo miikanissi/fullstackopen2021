@@ -14,7 +14,6 @@ const useRepositories = ({sortCriteria, filter, first}) => {
     fetchPolicy: "cache-and-network",
     variables: variables,
   });
-
   const handleFetchMore = () => {
     const canFetchMore = !loading && data?.repositories.pageInfo.hasNextPage;
     if (!canFetchMore) {
@@ -27,7 +26,6 @@ const useRepositories = ({sortCriteria, filter, first}) => {
       },
     });
   };
-
   return {
     repositories: data ? data.repositories : undefined,
     fetchMore: handleFetchMore,

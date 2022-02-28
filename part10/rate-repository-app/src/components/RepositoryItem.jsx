@@ -22,26 +22,22 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     padding: 15,
   },
-  topContainer: {
+  wrap: {
     flexDirection: "row",
-    marginBottom: 15,
+    marginBottom: 10,
   },
-  bottomContainer: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-  },
-  avatarContainer: {
+  avatarBox: {
     flexGrow: 0,
     marginRight: 20,
   },
-  contentContainer: {
+  flexBox: {
     flexGrow: 1,
     flexShrink: 1,
   },
   nameText: {
     marginBottom: 5,
   },
-  descriptionText: {
+  description: {
     flexGrow: 1,
   },
   avatar: {
@@ -49,20 +45,20 @@ const styles = StyleSheet.create({
     height: 45,
     borderRadius: theme.roundness,
   },
-  countItem: {
+  flexItem: {
     flexGrow: 0,
     alignItems: "center",
     justifyContent: "center",
     paddingHorizontal: 15,
   },
-  countItemCount: {
+  flexItemCount: {
     marginBottom: 5,
   },
-  languageContainer: {
+  languageBox: {
     marginTop: 10,
     flexDirection: "row",
   },
-  languageText: {
+  language: {
     color: "white",
     backgroundColor: theme.colors.primary,
     borderRadius: theme.roundness,
@@ -73,7 +69,7 @@ const styles = StyleSheet.create({
   separator: {
     height: 10,
   },
-  reviewRatingContainer: {
+  ratingBox: {
     height: 48,
     width: 48,
     borderRadius: 24,
@@ -83,22 +79,22 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  reviewRatingText: {
+  ratingText: {
     color: "blue",
     textAlign: "center",
   },
-  buttonContainer: {
+  buttonBox: {
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingTop: 10,
+    paddingTop: 15,
   },
 });
 
 const CountItem = ({ label, count, id }) => {
   return (
-    <View style={styles.countItem}>
+    <View style={styles.flexItem}>
       <Text
-        style={styles.countItemCount}
+        style={styles.flexItemCount}
         fontWeight="bold"
         testID={`${id}/${label}`}
       >
@@ -129,11 +125,11 @@ const RepositoryInfo = ({ repository, singleView }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.topContainer}>
-        <View style={styles.avatarContainer}>
+      <View style={styles.wrap}>
+        <View style={styles.avatarBox}>
           <Image source={{ uri: ownerAvatarUrl }} style={styles.avatar} />
         </View>
-        <View style={styles.contentContainer}>
+        <View style={styles.flexBox}>
           <Text
             style={styles.nameText}
             fontWeight="bold"
@@ -144,22 +140,22 @@ const RepositoryInfo = ({ repository, singleView }) => {
             {fullName}
           </Text>
           <Text
-            style={styles.descriptionText}
+            style={styles.description}
             color="textSecondary"
             testID={`${id}/description`}
           >
             {description}
           </Text>
           {language ? (
-            <View style={styles.languageContainer}>
-              <Text style={styles.languageText} testID={`${id}/lang`}>
+            <View style={styles.languageBox}>
+              <Text style={styles.language} testID={`${id}/lang`}>
                 {language}
               </Text>
             </View>
           ) : null}
         </View>
       </View>
-      <View style={styles.bottomContainer}>
+      <View>
         <CountItem count={stargazersCount} label="Stars" id={id} />
         <CountItem count={forksCount} label="Forks" id={id} />
         <CountItem count={reviewCount} label="Reviews" id={id} />
@@ -209,7 +205,7 @@ const ReviewItem = ({ review, reviewsOnly = false, refetch }) => {
   };
 
   const AllButtons = (
-    <View style={styles.buttonContainer}>
+    <View style={styles.buttonBox}>
       <Button
         style={{ backgroundColor: "blue" }}
         onPress={handleViewRepository}
@@ -224,11 +220,11 @@ const ReviewItem = ({ review, reviewsOnly = false, refetch }) => {
 
   return (
     <View style={styles.container}>
-      <View style={styles.topContainer}>
-        <View style={styles.reviewRatingContainer}>
-          <Text style={styles.reviewRatingText}>{rating}</Text>
+      <View style={styles.wrap}>
+        <View style={styles.ratingBox}>
+          <Text style={styles.ratingText}>{rating}</Text>
         </View>
-        <View style={styles.contentContainer}>
+        <View style={styles.flexBox}>
           <Text
             style={styles.nameText}
             fontWeight="bold"
@@ -238,7 +234,7 @@ const ReviewItem = ({ review, reviewsOnly = false, refetch }) => {
             {reviewsOnly ? repository.fullName : user.username}
           </Text>
           <Text
-            style={styles.descriptionText}
+            style={styles.description}
             color="textSecondary"
             testID={`${id}/description`}
           >

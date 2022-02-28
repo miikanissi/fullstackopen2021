@@ -30,8 +30,7 @@ export class RepositoryListContainer extends React.Component {
   };
 
   render() {
-    const { repositories, history, onEndReach } = this.props;
-
+    const { repositories, navigate, onEndReach } = this.props;
     const repositoryNodes = repositories
       ? repositories.edges.map((edge) => edge.node)
       : [];
@@ -42,7 +41,7 @@ export class RepositoryListContainer extends React.Component {
         keyExtractor={({ id }) => id}
         ListHeaderComponent={this.renderHeader}
         renderItem={({ item }) => (
-          <Pressable onPress={() => history.push(`/${item.id}`)}>
+          <Pressable onPress={() => navigate.push(`/${item.id}`)}>
             <RepositoryItem repository={item} />
           </Pressable>
         )}
@@ -73,9 +72,9 @@ const RepositoryList = () => {
     <RepositoryListContainerWithRouter
       repositories={repositories}
       setSortingCriteria={setSorting}
-      sorting={sorting}
-      setFilter={setFilter}
       filter={filter}
+      setFilter={setFilter}
+      sorting={sorting}
       onEndReach={onEndReach}
     />
   );

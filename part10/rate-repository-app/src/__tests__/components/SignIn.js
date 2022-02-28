@@ -10,14 +10,11 @@ describe("SignIn", () => {
       const {getByTestId, getByPlaceholderText} = render(
         <SignInContainer onSubmit={onSubmit} />
       );
-
       fireEvent.changeText(getByPlaceholderText("Username"), credentials.username);
       fireEvent.changeText(getByPlaceholderText("Password"), credentials.password);
       fireEvent.press(getByTestId("submitButton"));
-
       await waitFor(() => {
         expect(onSubmit).toHaveBeenCalledTimes(1);
-
         expect(onSubmit.mock.calls[0][0]).toEqual(credentials);
       });
     });

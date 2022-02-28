@@ -1,5 +1,4 @@
 import { useQuery } from "@apollo/client";
-
 import RepositoryItem from "./RepositoryItem";
 import { GET_AUTHORIZED_USER } from "../graphql/queries";
 
@@ -11,7 +10,6 @@ const UserReviews = () => {
   if (data?.authorizedUser) {
     userReviews = data.authorizedUser.reviews.edges.map(({ node }) => node);
   }
-
   return (
     <RepositoryItem reviews={userReviews} loading={loading} refetch={refetch} />
   );

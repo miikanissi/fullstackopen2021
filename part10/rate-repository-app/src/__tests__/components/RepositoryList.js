@@ -1,6 +1,5 @@
 import React from "react";
 import {render} from "@testing-library/react-native";
-
 import {RepositoryListContainer} from "../../components/RepositoryList.jsx";
 import formatInThousands from "../../utils/formatInThousands";
 
