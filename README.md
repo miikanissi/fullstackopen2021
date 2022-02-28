@@ -2,9 +2,13 @@
 
 This repository contains my assignment submissions for Helsinki University Full Stack Open 2021 ([https://fullstackopen.com/en/](https://fullstackopen.com/en/)).
 
-The course is an introductory course on Modern JavaScript-based Web Development. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js.
+The course is on Modern JavaScript-based Web Development. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js.
 
-The course also contains a section on GraphQL, a modern alternative to REST APIs and TypeScript, an open-source typed superset of JavaScript that compiles to plain JavaScript.
+The course also contains additional sections for the following:
+  - GraphQL, a modern alternative to REST APIs.
+  - TypeScript, an open-source typed superset of JavaScript that compiles to plain JavaScript.
+  - React Native, an open-source UI software framework to create native mobile applications using JavaScript.
+  - Docker Containers, an open platform for developing, shipping, and running applications by virtualizing the operating system of the computer on which it is installed and running.
 
 ## Parts
 
@@ -28,6 +32,10 @@ The course also contains a section on GraphQL, a modern alternative to REST APIs
 
 #### [Part 9 - TypeScript](./part9)
 
+#### [Part 10 - React Native](./part10)
+
+#### [Part 12 - Containers](./part12)
+
 ## Working with Heroku inside a git repository
 
 Heroku uses git repositories to manage deployment but since we have multiple seperate projects in this repository utilizing Heroku we need to do some tricks to make it work.
@@ -48,4 +56,5 @@ This command will only push the defined subtree to heroku while allowing us the 
 <p align="center"><img height="60%" width="100%" src="./certificates/certificate-fullstack.png" alt="FullStack Certificate"></p>
 <p align="center"><img height="60%" width="100%" src="./certificates/certificate-graphql.png" alt="GraphQL Certificate"></p>
 <p align="center"><img height="60%" width="100%" src="./certificates/certificate-typescript.png" alt="TypeScript Certificate"></p>
+<p align="center"><img height="60%" width="100%" src="./certificates/certificate-reactnative.png" alt="React Native Certificate"></p>
 <p align="center"><img height="60%" width="100%" src="./certificates/certificate-containers.png" alt="Docker Containers Certificate"></p>

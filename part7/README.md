@@ -9,3 +9,7 @@ The seventh part of the course touches on several different themes. First, we'll
 #### [Routed Anecdotes](./routed-anecdotes)
 
 #### [Ultimate Hooks](./ultimate-hooks)
+
+## Course Certificate for Parts 0-7
+
+<p align="center"><img height="60%" width="100%" src="../certificates/certificate-fullstack.png" alt="FullStack Certificate"></p>
