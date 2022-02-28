@@ -4,6 +4,8 @@ import * as yup from "yup";
 
 import FormikTextInput from "./FormikTextInput";
 import theme from "../theme";
+import useSignIn from "../hooks/useSignIn";
+import AuthStorage from "../utils/authStorage";
 
 const styles = StyleSheet.create({
   container:{
@@ -47,9 +49,16 @@ const SignIn = () => {
     username: "",
     password: "",
   };
-
-  const onSubmit = (values) => {
-    console.log(values);
+  const [signIn] = useSignIn();
+  const storage = new AuthStorage();
+  const onSubmit = async (values) => {
+    const { username, password } = values;
+    try {
+      const {data} = await signIn({ username, password });
+      storage.setAccessToken(data.authenticate.accessToken);
+    } catch (error) {
+      console.log("Error occured during Sign In: ", error);
+    }
   };
 
   return (
