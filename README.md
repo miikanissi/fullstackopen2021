@@ -8,6 +8,7 @@ The course also contains additional sections for the following:
   - GraphQL, a modern alternative to REST APIs.
   - TypeScript, an open-source typed superset of JavaScript that compiles to plain JavaScript.
   - React Native, an open-source UI software framework to create native mobile applications using JavaScript.
+  - CI/CD, Continuous integration (CI) and continuous delivery (CD)
   - Docker Containers, an open platform for developing, shipping, and running applications by virtualizing the operating system of the computer on which it is installed and running.
 
 ## Parts
@@ -34,6 +35,8 @@ The course also contains additional sections for the following:
 
 #### [Part 10 - React Native](./part10)
 
+#### [Part 11 - CI/CD](./part11)
+
 #### [Part 12 - Containers](./part12)
 
 ## Working with Heroku inside a git repository
@@ -57,4 +60,5 @@ This command will only push the defined subtree to heroku while allowing us the 
 <p align="center"><img height="60%" width="100%" src="./certificates/certificate-graphql.png" alt="GraphQL Certificate"></p>
 <p align="center"><img height="60%" width="100%" src="./certificates/certificate-typescript.png" alt="TypeScript Certificate"></p>
 <p align="center"><img height="60%" width="100%" src="./certificates/certificate-reactnative.png" alt="React Native Certificate"></p>
+<p align="center"><img height="60%" width="100%" src="./certificates/certificate-cicd.png" alt="CI/CD Certificate"></p>
 <p align="center"><img height="60%" width="100%" src="./certificates/certificate-containers.png" alt="Docker Containers Certificate"></p>
